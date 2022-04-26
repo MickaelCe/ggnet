@@ -7,8 +7,8 @@ function App() {
     <div className="App">
       <h1>Hello dude</h1>
       <Row title="Current hottest games" />
-      <Row title="Current sexiest games" />
-      <Row title="Choix du chef" />
+      {/* <Row title="Current sexiest games" />
+      <Row title="Choix du chef" /> */}
     </div>
   );
 }

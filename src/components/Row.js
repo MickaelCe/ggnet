@@ -1,4 +1,5 @@
-import React, {useState, useEffect}  from 'react'
+import React, { useState, useEffect } from 'react';
+import "../components-css/Row.css";
 
 const Row = ({ title }) => {
   const [games, setGames] = useState([]);
@@ -42,7 +43,7 @@ const fetchGames = async () => {
         <div className='row__posters'>
         {
           games.map(game => (game.id > randomMin && game.id < randomMax ? (     
-            <img src={game.img_url} alt={game.names} key={game.id} className='rownb'/>
+            <img src={game.img_url} alt={game.names} key={game.id} className='row__poster'/>
           ) : ('')
               )
             )}
