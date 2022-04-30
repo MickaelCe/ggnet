@@ -1,14 +1,17 @@
 import './App.css';
-import Row from './components/Row'
+import React from 'react';
+import Row from "./components/Row";
+// const RowLoaded = React.lazy(() => import ("./components/Row"));
+
 
 function App() {
 
   return (
     <div className="App">
       <h1>Hello dude</h1>
-      <Row title="Current hottest games" />
-      {/* <Row title="Current sexiest games" />
-      <Row title="Choix du chef" /> */}
+      <Row title="Top played" />
+      <Row title="Best rated" />
+      <Row title="Trending Now" />
     </div>
   );
 }

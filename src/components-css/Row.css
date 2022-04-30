@@ -1,14 +1,19 @@
+.row>h2{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+    margin: 0;
+}
 .row__posters{
     display: flex;
     overflow-y: hidden;
     overflow-x: scroll;
-    padding: 20px;
+    padding: 15px;
+    height: 120px;
 }
-
-.row__poster::-webkit-scrollbar{
+.row__posters::-webkit-scrollbar{
     display: none;
 }
-
 .row__poster{
     width: 100%;
     object-fit: contain;
@@ -16,9 +21,30 @@
     transition: transform 450ms;
     margin-right: 10px;
 }
-
-.row__poster:hover{
-    transform: scale(1.08);
+.row__poster:hover, .loadingSquare:hover{
+    transform: scale(1.06);
     cursor: pointer;
 }
-
+.loading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 15px;
+    height: 120px;
+}
+.loadingSquare{
+    width: 213px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    transition: transform 450ms;
+    margin-right: 10px;
+    background-color: #13212b;
+}
+.loader{
+    height: 50px;
+}
