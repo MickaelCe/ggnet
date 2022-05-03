@@ -2,9 +2,11 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App___container{
+  background-color: #04090C;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 @media (prefers-reduced-motion: no-preference) {

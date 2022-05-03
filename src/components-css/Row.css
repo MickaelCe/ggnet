@@ -1,5 +1,9 @@
+.row{
+    margin-top: 2rem;
+}
 .row>h2{
     display: flex;
+    color: rgb(226, 226, 226);
     justify-content: flex-start;
     padding-left: 10px;
     margin: 0;
