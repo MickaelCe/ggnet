@@ -25,8 +25,9 @@ const Search = () => {
 
   return (
     <div className='search'>
+      <input type="text" value={userSearchs} onChange={e => setUserSearch(e.target.value)} className="search__input" placeholder='Search a game or a categories' />
       <div className='search__container'> 
-        <input type="text" value={userSearchs} onChange={e => setUserSearch(e.target.value)} className="search__input" placeholder='Search a game or a categories'/>
+        
         <div className='search__images'>
         {searchs.map(search => (search.names.toLowerCase().includes(userSearchs.toLowerCase()) || search.categories.toLowerCase().includes(userSearchs.toLowerCase()) ? (
                   <div key={search.id} className='search__image'>
