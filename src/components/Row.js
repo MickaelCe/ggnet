@@ -9,7 +9,7 @@ const Row = ({ title }) => {
 
   useEffect (()=>{
     const getRandomMax = () =>{
-      const randomMax = Math.floor(Math.random() * 10251);
+      const randomMax = Math.floor(Math.random() * 1000);
       setRandomMax(randomMax)
     }
     getRandomMax()

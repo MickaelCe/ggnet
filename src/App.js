@@ -7,7 +7,6 @@ import Home from './components/pages/Home';
 import Search from './components/pages/Search';
 import Contact from './components/pages/Contact';
 
-
 function App() {
 
   return (
