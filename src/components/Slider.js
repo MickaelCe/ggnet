@@ -25,7 +25,7 @@ function Slider() {
     ]
 
   return (
-      <Carousel className='carousel___custom' autoPlay={true} infiniteLoop={true} showStatus={false}>
+      <Carousel className='carousel___custom' autoPlay={true} infiniteLoop={true} showStatus={false} swipeable={true}>
           {data.map(slide => (
               <div key={slide.id} className='carousel___custom___image'>
                   <img src={require(`../assets/${slide.image}`)}  alt="" />

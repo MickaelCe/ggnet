@@ -7,6 +7,7 @@ import Landing from './components/pages/Landing';
 import Home from './components/pages/Home';
 import Search from './components/pages/Search';
 import Contact from './components/pages/Contact';
+import GameDetails from './components/pages/GameDetails';
 
 function App() {
 
@@ -26,6 +27,9 @@ function App() {
                     </Route>
                     <Route 
                       path='/contact' element={<Contact />}>
+                    </Route>
+                    <Route 
+                      path='/game/:id' element={<GameDetails />}>
                     </Route>
               </Routes>
         <Footer />

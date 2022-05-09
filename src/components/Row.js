@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import "../components-css/Row.css";
 
 const Row = ({ title }) => {
@@ -17,7 +18,7 @@ const Row = ({ title }) => {
 
   useEffect (()=>{
     const getRandomMin = () =>{
-      const randomMin = randomMax - 15 ;
+      const randomMin = randomMax - 10 ;
       setRandomMin(randomMin)
     }
     getRandomMin()
@@ -46,7 +47,9 @@ const fetchGames = async () => {
     <div className='row'>
         <h2>{title}</h2>
       <div className='row__posters'>
-        {loading ? (games.map(game => (game.id > randomMin && game.id < randomMax ? (<img src={game.img_url} alt={game.id} key={game.id} className='row__poster' />) : (''))))
+        {loading ? (games.map(game => (game.id > randomMin && game.id < randomMax ? (
+          <Link to={`/game/${game.id}`} className='row__poster__link' key={game.id}><img src={game.img_url} alt={game.id} key={game.id} className='row__poster__image'/></Link>
+        ) : (''))))
           : (
             <div className='loading'>
               <div className='loadingSquare'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>

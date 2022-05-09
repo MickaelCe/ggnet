@@ -1,11 +1,13 @@
 .Navbar{
-    z-index: 99;
+    z-index: 9998;
+    
 }
 .Navbar__container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     margin-bottom: -50px;
+    width: 100%;
 }
 .Navbar__container>img{
   margin: 0 0 0 1rem;

@@ -13,22 +13,29 @@
     overflow-y: hidden;
     overflow-x: scroll;
     padding: 15px;
-    height: 120px;
+    height: 100px;
 }
 .row__posters::-webkit-scrollbar{
     display: none;
 }
-.row__poster{
-    width: 100%;
+.row__poster__link{
+    width: 90%;
     object-fit: contain;
     max-height: 100px;
     transition: transform 450ms;
     margin-right: 10px;
 }
-.row__poster:hover, .loadingSquare:hover{
+.row__poster__link:hover, .loadingSquare:hover{
     transform: scale(1.06);
     cursor: pointer;
 }
+
+.row__poster__image{
+    object-fit: contain;
+    max-height: 100px;
+}
+
+
 .loading{
     display: flex;
     justify-content: space-between;

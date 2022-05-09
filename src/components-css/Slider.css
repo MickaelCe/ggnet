@@ -15,6 +15,7 @@
     width: 230px !important;
     border-radius: 5px;
     margin-bottom: 3rem;
+    cursor: pointer;
 }
 
 .carousel .thumb {
@@ -69,6 +70,9 @@
     .carousel .thumbs-wrapper {
         height: 20vh;
         max-height: 600px;
+    }
+    .thumbs-wrapper {
+        display: none;
     }
 }
 

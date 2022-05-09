@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="container___links">
             <div className="About___section">
               <h6 className='active'>About</h6>
-              <p className="text-justify">GamerGate est un petit projet perso ayant pour but d'apprendre l'utilisation de ReactJS.</p>
+              <p className="text-justify">GamerGate is a small project aiming ReactJS learning.</p>
             </div>
 
             <div className="Links___section">
