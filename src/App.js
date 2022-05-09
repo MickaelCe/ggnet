@@ -3,6 +3,7 @@ import React from 'react';
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import { Route, Routes } from 'react-router-dom';
+import Landing from './components/pages/Landing';
 import Home from './components/pages/Home';
 import Search from './components/pages/Search';
 import Contact from './components/pages/Contact';
@@ -13,9 +14,12 @@ function App() {
     <div className="App">
       <div className='App___container'>
         <Nav />
-              <Routes>  
+              <Routes>
                     <Route 
-                      path='/' element={<Home />}>
+                      path='/' element={<Landing />}>
+                    </Route>
+                    <Route 
+                      path='/home' element={<Home />}>
                     </Route>
                     <Route 
                       path='/search' element={<Search />}>

@@ -6,7 +6,6 @@
   background-color: #04090C;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 @media (prefers-reduced-motion: no-preference) {

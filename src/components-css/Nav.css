@@ -7,7 +7,9 @@
     justify-content: space-between;
     margin-bottom: -50px;
 }
-
+.Navbar__container>img{
+  margin: 0 0 0 1rem;
+}
 .Navbar__menu{
     width: 30%;    
     display: flex;

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { FaBars, FaTimes} from "react-icons/fa";
 import { Link } from 'react-router-dom';
 
@@ -17,7 +17,7 @@ const Burger = () => {
             </div>
             <ul className={click ? 'nav-menu active' : 'nav-menu'}>
                 <li className="nav-item">
-                    <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+                    <Link to='/home' className='nav-links' onClick={closeMobileMenu}>
                         Home
                     </Link>
                 </li>

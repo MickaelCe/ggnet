@@ -12,7 +12,7 @@ const Nav = () => {
             <NavLink to='/search' className='Navbar__link'>
               <span className='underline'>Search</span>
             </NavLink>
-            <NavLink to='/' className='Navbar__link'>
+            <NavLink to='/home' className='Navbar__link'>
               <span className='underline'>Home</span>
             </NavLink>
             <NavLink to='/contact' className='Navbar__link'>
