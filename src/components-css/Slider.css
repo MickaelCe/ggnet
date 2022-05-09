@@ -1,0 +1,139 @@
+.carousel{
+    position: absolute !important;
+    margin-top: 6%;
+    /* height: 100%; */
+}
+.thumbs{
+    width: 100px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.thumb{
+    width: 230px !important;
+    border-radius: 5px;
+    margin-bottom: 3rem;
+}
+
+.carousel .thumb {
+    transition: all .15s ease-in !important;
+    transition-property: border;
+    transition-duration: 0.15s;
+    transition-timing-function: ease-in;
+    transition-delay: 0s;
+    display: inline-block;
+    margin-right: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    border: 3px solid #fff;
+    padding: 0 !important;
+}
+
+.carousel .thumb.selected, .carousel .thumb:hover {
+    border: 3px solid #fb8022 !important;
+    transform: translateX(10%);
+}
+
+.carousel .thumbs-wrapper {
+    margin: 20px;
+}
+
+.carousel___custom{
+    min-height: 1000px;
+    margin-bottom: 1rem;
+    width: 100%
+}
+.carousel, .carousel-slider{
+    object-fit: contain;
+}
+
+@media all and (min-width: 250px) and (max-width: 910px){
+    .thumbs, .control-dots{
+        display: none;
+    }
+    .carousel___custom{
+        min-height: 300px;
+        margin-bottom: 1rem;
+    }
+    .control-arrow{
+        display: none;
+    }
+    .carousel___custom{
+        margin-top: 5rem;
+    }
+    .carousel{
+        position: absolute !important;
+    }
+    .carousel .thumbs-wrapper {
+        height: 20vh;
+        max-height: 600px;
+    }
+}
+
+@media all and (min-width: 910px) and (max-width: 1154px){
+    .carousel___custom{
+        min-height: 700px;
+        margin-bottom: 3rem;
+    }
+
+    .thumbs-wrapper{
+        position: absolute !important;
+        top: 250px;
+        width: 100%;
+        padding-left: 0 !important;
+    }
+
+    .thumbs{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .thumb{
+        width: 180px !important;
+        border-radius: 5px;
+        margin-bottom: 3rem;
+    }
+
+    .carousel .thumb.selected, .carousel .thumb:hover {
+        border: 3px solid #fb8022 !important;
+        transform: translateY(-5%);
+    }
+}
+
+@media all and (min-width: 1155px) and (max-width: 1439px){
+
+    .carousel___custom{
+        min-height: 700px;
+        margin-bottom: 3rem;
+    }
+
+    .thumbs-wrapper{
+        position: absolute !important;
+        top: 400px;
+        width: 100%;
+        padding-left: 0 !important;
+    }
+
+    .thumbs{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+    .thumb{
+        width: 180px !important;
+        border-radius: 5px;
+        margin-bottom: 3rem;
+    }
+
+    .carousel .thumb.selected, .carousel .thumb:hover {
+        border: 3px solid #fb8022 !important;
+        transform: translateY(-5%);
+    }
+}
+
