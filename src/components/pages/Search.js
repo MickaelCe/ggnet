@@ -76,7 +76,7 @@ const Search = () => {
         <div className='search__images'>
         {loading ? (searchs.map(search => ((search.names.toLowerCase().trim().includes(userSearchs.toLowerCase().trim()) && search.id <= idSearch) || (search.categories.toLowerCase().trim().includes(userSearchs.toLowerCase().trim()) && search.id <= idSearch) ? (
                   <div key={search.id}  className='search__image' >
-                    <Link to={`/game/${search.id}`} className='search__image'>
+                    <Link to={`/game/${search.names}`} className='search__image'>
                       <img src={search.img_url} alt={search.id} key={search.id} data-aos="fade-right" />
                     </Link>
                   </div>

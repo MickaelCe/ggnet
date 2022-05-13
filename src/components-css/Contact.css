@@ -23,27 +23,29 @@
   width: 100%;
   margin-bottom: 2rem;
   padding: 2.2rem;
-  border-radius: 4px;
   border: none;
   font-size: 1.6rem;
   border: 2px solid transparent;
   font-family: Verdana, Arial, sans-serif;
+  color: #fb8022;
+  border: solid 3px #fb8022;
+  background: none;
 }
 
 .form-control::placeholder {
-  color: #9da1a5;
+  color: #ffa764;
   font-weight: bold;
 }
 
 .message {
   resize: vertical;
-  min-height: 15rem;
+  min-height: 17rem;
+  border: solid 3px #fb8022;
 }
 
 .form-control:focus,
 .message:focus {
   outline: none;
-  border: 2px solid var(--accent);
 }
 
 .btn {
@@ -59,6 +61,7 @@
   padding-right: 3.5rem;
   margin: 0 auto;
   cursor: pointer;
+  border: solid 2px #fb8022;
 }
 
 .btn:hover {

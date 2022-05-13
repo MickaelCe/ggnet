@@ -70,11 +70,13 @@
     border: none;
     font-weight: 700;
     border-radius: 0.2vw;
+    border: solid #fb8022 1px;
     padding-left: 2rem;
     padding-right: 2rem;
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;    
     margin-right: 2rem;
+    margin-top: 2rem;
     background-color: #fb8022;
 }
 

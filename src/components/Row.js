@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../components-css/Row.css";
+import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
 
 const Row = ({ title }) => {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(false);
   const [randomMax, setRandomMax] = useState(0);
   const [randomMin, setRandomMin] = useState(0);
+
+
+
+
 
   useEffect (()=>{
     const getRandomMax = () =>{
@@ -18,7 +23,7 @@ const Row = ({ title }) => {
 
   useEffect (()=>{
     const getRandomMin = () =>{
-      const randomMin = randomMax - 10 ;
+      const randomMin = randomMax - 15 ;
       setRandomMin(randomMin)
     }
     getRandomMin()
@@ -41,14 +46,15 @@ const fetchGames = async () => {
   setLoading(true);
     return data
 }
-  
 
   return (
     <div className='row'>
-        <h2>{title}</h2>
-      <div className='row__posters'>
+      <h2>{title}</h2>
+        <div className='row__posters'>
+        <AiOutlineRight className='arrow__right' size={64}/>
+        <AiOutlineLeft className='arrow__left' size={64}/>
         {loading ? (games.map(game => (game.id > randomMin && game.id < randomMax ? (
-          <Link to={`/game/${game.id}`} className='row__poster__link' key={game.id}><img src={game.img_url} alt={game.id} key={game.id} className='row__poster__image'/></Link>
+          <Link to={`/game/${game.names}`} className='row__poster__link' key={game.id}><img src={game.img_url} alt={game.id} key={game.id} className='row__poster__image'/></Link>
         ) : (''))))
           : (
             <div className='loading'>

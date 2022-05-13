@@ -31,7 +31,7 @@ const Header = () => {
                       <img src={header.img_url} alt={header.id} key={header.id} className='header__image' />
                       <h1 className='header__name'>{header.names}</h1>
                       <p className='header__description'>{header.user_reviews}<span>By : {header.developer}</span></p>
-                      <div className='header__actions'><a href={`/game/${header.id}`} target='blank' className='header__buttons'>Infos</a><a href={header.link} target='blank_' className='header__buttons'>Buy now</a></div>
+                      <div className='header__actions'><a href={`/game/${header.names}`} target='blank' className='header__buttons'>Infos</a><a href={header.link} target='blank_' className='header__buttons'>Buy now</a></div>
                       <div className='filter__header'></div>
                   </div>
               ) : ('')))) 

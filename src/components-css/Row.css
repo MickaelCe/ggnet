@@ -59,3 +59,47 @@
 .loader{
     height: 50px;
 }
+
+.arrow__right{
+    position: absolute;
+    align-self: center;
+    right: 0;
+    z-index: 99;
+    color: #fb8022;
+    animation: 0.8s linear infinite breath;
+}
+
+.arrow__left{
+    position: absolute;
+    align-self: center;
+    left: 0;
+    z-index: 99;
+    color: #fb8022;
+    animation: 0.8s linear infinite breathleft;
+}
+
+@keyframes breath{
+    from {
+        opacity: 0.8;
+        transform: translate(-2px);
+    }
+  
+    to {
+        opacity: 1;
+        padding-left: 0.5rem;
+        transform: translate(0px);
+    }
+  }
+
+  @keyframes breathleft{
+    from {
+        opacity: 0.8;
+        transform: translate(0px);
+    }
+  
+    to {
+        opacity: 1;
+        padding-left: 0.5rem;
+        transform: translate(-2px);
+    }
+  }
