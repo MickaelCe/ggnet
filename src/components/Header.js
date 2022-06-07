@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import "../components-css/Header.css";
+import loader from '../assets/loader.gif';
 
 const Header = () => {
 
@@ -31,12 +33,12 @@ const Header = () => {
                       <img src={header.img_url} alt={header.id} key={header.id} className='header__image' />
                       <h1 className='header__name'>{header.names}</h1>
                       <p className='header__description'>{header.user_reviews}<span>By : {header.developer}</span></p>
-                      <div className='header__actions'><a href={`/game/${header.names}`} target='blank' className='header__buttons'>Infos</a><a href={header.link} target='blank_' className='header__buttons'>Buy now</a></div>
+                      <div className='header__actions'><Link to={`/game/${header.names}`} className='header__buttons'>Infos</Link><a href={header.link} target='blank_' className='header__buttons'>Buy now</a></div>
                       <div className='filter__header'></div>
                   </div>
               ) : ('')))) 
                 : (<div className='header__container'>
-                <div className='loading__header'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>
+                <div className='loading__header'><img src={loader} alt="loader" className='loader'/></div>
               </div>)
             }   
       </header>

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Youtube from 'react-youtube';
-import { Navigate, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {IoMdArrowRoundBack} from 'react-icons/io';
 import "../../components-css/GameDetails.css";
 
 function GameDetails() {
 
-  const [searchGame, setSearchGame] = useState(window.location.pathname.replace("/game/", ''));
+  const [searchGame] = useState(window.location.pathname.replace("/game/", ''));
   const [games, setGames] = useState([]);
   const [trailerUrl, setTrailerUrl] = useState("");
   const [loading, setLoading] = useState(false);
@@ -24,7 +24,7 @@ function GameDetails() {
 
   const navigate = useNavigate();
 
- console.log(searchGame.replace(/(%C2%AE|%20)/g, ' ').replace(/ /g, '').toLowerCase().trim())
+
   useEffect(() => {
     const getGames = async () => {
         const gameFromServer = await fetchGame()
@@ -33,10 +33,11 @@ function GameDetails() {
     const getUrl = async () => {
       const UrlFromApi = await fetchTrailer()
       setTrailerUrl(UrlFromApi.items[0].id.videoId)
-  }
+    }
     getGames()
     getUrl()
-}, [])
+  }, [])
+
 
   
   const fetchGame = async () => {
@@ -51,9 +52,10 @@ function GameDetails() {
     const dataUrl = await res.json();
     return dataUrl
   }
+  
   return (
       <div className='game___container'>
-          {loading ? (games.map(game => (game.names.replace(/(%C2%AE|%20)/g, ' ').replace(/ /g, '').toLowerCase().trim() == searchGame.replace(/(%C2%AE|%20)/g, ' ').replace(/ /g, '').toLowerCase().trim() ? (
+          {loading ? (games.map(game => (game.names.replace(/(%C2%AE|%20)/g, ' ').replace(/ /g, '').toLowerCase().trim() === searchGame.replace(/(%C2%AE|%20)/g, ' ').replace(/ /g, '').toLowerCase().trim() ? (
             <div key={game.id} className='game__image' style={{ backgroundImage: `url(${game.img_url}` }}>
               <div className='game___container__infos'>
                 <h1>{game.names}</h1>

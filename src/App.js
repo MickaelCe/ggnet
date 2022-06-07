@@ -17,7 +17,7 @@ function App() {
         <Nav />
               <Routes>
                     <Route 
-                      path='/' element={<Landing />}>
+                      path='/gamergate' element={<Landing />}>
                     </Route>
                     <Route 
                       path='/home' element={<Home />}>

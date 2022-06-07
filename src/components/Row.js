@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import "../components-css/Row.css";
 import { AiOutlineLeft, AiOutlineRight } from 'react-icons/ai';
+import loader from '../assets/loader.gif';
 
 const Row = ({ title }) => {
   const [games, setGames] = useState([]);
@@ -58,13 +59,13 @@ const fetchGames = async () => {
         ) : (''))))
           : (
             <div className='loading'>
-              <div className='loadingSquare'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>
-              <div className='loadingSquare'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>
-              <div className='loadingSquare'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>
-              <div className='loadingSquare'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>
-              <div className='loadingSquare'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>
-              <div className='loadingSquare'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>
-              <div className='loadingSquare'><img src={require('../assets/loader.gif')} alt="loader" className='loader'/></div>
+              <div className='loadingSquare'><img src={loader} alt="loader" className='loader'/></div>
+              <div className='loadingSquare'><img src={loader} alt="loader" className='loader'/></div>
+              <div className='loadingSquare'><img src={loader} alt="loader" className='loader'/></div>
+              <div className='loadingSquare'><img src={loader} alt="loader" className='loader'/></div>
+              <div className='loadingSquare'><img src={loader} alt="loader" className='loader'/></div>
+              <div className='loadingSquare'><img src={loader} alt="loader" className='loader'/></div>
+              <div className='loadingSquare'><img src={loader} alt="loader" className='loader'/></div>
             </div>
           )}
         </div>

@@ -4,11 +4,16 @@
   --bg: #212529;
   --accent: #fb8022;
 }
+.contact___bg{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .container__form {
   max-width: 1140px;
-  margin: 0 auto;
-  padding: 6rem 2rem;
+  margin: 6rem auto;
+  padding: 2rem 2rem;
+  backdrop-filter: brightness(40%);
 }
 
 .container__form>h1 {
@@ -22,25 +27,25 @@
 .form-control {
   width: 100%;
   margin-bottom: 2rem;
-  padding: 2.2rem;
-  border: none;
-  font-size: 1.6rem;
-  border: 2px solid transparent;
+  height: 4rem;
   font-family: Verdana, Arial, sans-serif;
   color: #fb8022;
-  border: solid 3px #fb8022;
+  border: none #fb8022;
+  border-bottom: solid 3px #fb8022;
   background: none;
 }
 
 .form-control::placeholder {
   color: #ffa764;
   font-weight: bold;
+  position: absolute;
+  left: 0;
 }
 
 .message {
   resize: vertical;
   min-height: 17rem;
-  border: solid 3px #fb8022;
+  border: none;
 }
 
 .form-control:focus,
