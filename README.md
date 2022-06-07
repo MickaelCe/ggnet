@@ -17,18 +17,14 @@
     <br> 
 </p>
 
-## 📝 Table of Contents
-- [About](#about)
-- [Technos](#built_using)
-- [Authors](#authors)
 
 ## 🧐 About <a name = "about"></a>
 
 
-Refonte d'un ancien projet fait vanilla puis avec laravel, cette fois REACT.
-Slider en landing page ✔️
-Utilisation d'une api pour fetch les data des jeux ✔️
-Search section ✔️
+* Refonte d'un ancien projet fait vanilla puis avec laravel, cette fois REACT.
+* Slider en landing page ✔️
+* Utilisation d'une api pour fetch les data des jeux ✔️
+* Search section ✔️
 
 Bonus : Utilisation de l'api youtube pour aller chercher les trailer des jeux. ✔️
 
